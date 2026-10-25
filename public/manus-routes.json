@@ -1,0 +1,22 @@
+{
+  "routes": [
+    { "path": "/", "title": "Aura Leather Co. — Home" },
+    { "path": "/shop", "title": "Shop — Aura Leather Co." },
+    { "path": "/product/:id", "title": "Product — Aura Leather Co." },
+    { "path": "/cart", "title": "Your Bag — Aura Leather Co." },
+    { "path": "/checkout", "title": "Checkout — Aura Leather Co." },
+    { "path": "/account", "title": "My Account — Aura Leather Co." },
+    { "path": "/admin", "title": "Atelier Admin — Aura Leather Co." },
+    { "path": "/about", "title": "Our Story — Aura Leather Co." },
+    { "path": "/contact", "title": "Contact — Aura Leather Co." },
+    { "path": "/index.html", "title": "Aura Leather Co. — Home" },
+    { "path": "/shop.html", "title": "Shop — Aura Leather Co." },
+    { "path": "/product.html", "title": "Product — Aura Leather Co." },
+    { "path": "/cart.html", "title": "Your Bag — Aura Leather Co." },
+    { "path": "/checkout.html", "title": "Checkout — Aura Leather Co." },
+    { "path": "/account.html", "title": "My Account — Aura Leather Co." },
+    { "path": "/admin.html", "title": "Atelier Admin — Aura Leather Co." },
+    { "path": "/about.html", "title": "Our Story — Aura Leather Co." },
+    { "path": "/contact.html", "title": "Contact — Aura Leather Co." }
+  ]
+}

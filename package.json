@@ -1,0 +1,35 @@
+{
+  "name": "aura-leather-co",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aura Leather Co. luxury leather goods storefront",
+  "packageManager": "pnpm@11.25.0",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
+    "build:motion": "esbuild src/motion/index.jsx --bundle --minify --format=iife --global-name=AuraMotionBundle --outfile=public/js/ui-motion.bundle.js && cp src/components/SpecularButton.css public/css/specular-button.css && cp src/components/FlexCarousel.css public/css/flex-carousel.css && cp src/components/CircularCarousel.css public/css/circular-carousel.css && rm -f public/js/ui-motion.bundle.css",
+    "build": "npm run build:motion",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:seed": "node prisma/seed.js",
+    "db:setup": "npm run db:push && npm run db:seed"
+  },
+  "dependencies": {
+    "@prisma/client": "6.13.0",
+    "bcryptjs": "2.4.3",
+    "cookie-parser": "1.4.7",
+    "dotenv": "16.4.7",
+    "express": "4.21.2",
+    "express-validator": "7.2.1",
+    "gsap": "3.13.0",
+    "jsonwebtoken": "9.0.2",
+    "ogl": "1.0.11",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.5",
+    "prisma": "6.13.0"
+  }
+}

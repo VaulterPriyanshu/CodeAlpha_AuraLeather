@@ -1,0 +1,117 @@
+.specular-webgl-overlay {
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: 2147483000;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.specular-enhanced {
+  --specular-radius: 18px;
+  --specular-text-color: #f5f5f5;
+  border-radius: var(--specular-radius);
+}
+
+.specular-enhanced[data-specular-size="sm"] {
+  --specular-line-scale: 0.84;
+}
+
+.specular-enhanced[data-specular-size="md"] {
+  --specular-line-scale: 1;
+}
+
+.specular-enhanced[data-specular-size="lg"] {
+  --specular-line-scale: 1.12;
+}
+
+.specular-enhanced:disabled,
+.specular-enhanced[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+.specular-fallback {
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2),
+    inset 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.specular-fallback:disabled,
+.specular-fallback[aria-disabled="true"] {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.specular-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--specular-radius, 18px);
+  background: linear-gradient(135deg, #525252, #3c3736);
+  color: var(--specular-text-color, #f5f5f5);
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  isolation: isolate;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    opacity 180ms ease;
+}
+
+.specular-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.14),
+    0 8px 22px rgba(44, 26, 29, 0.2);
+}
+
+.specular-button:focus-visible {
+  outline: 2px solid #d2b48c;
+  outline-offset: 3px;
+}
+
+.specular-button:disabled {
+  opacity: 0.56;
+  cursor: not-allowed;
+}
+
+.specular-button__label {
+  position: relative;
+  z-index: 1;
+}
+
+.specular-size-sm {
+  min-height: 34px;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.82rem;
+}
+
+.specular-size-md {
+  min-height: 42px;
+  padding: 0.65rem 1.15rem;
+  font-size: 0.92rem;
+}
+
+.specular-size-lg {
+  min-height: 48px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 640px) {
+  .specular-button.specular-size-lg {
+    min-height: 46px;
+    padding-inline: 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .specular-button {
+    transition: none;
+  }
+}

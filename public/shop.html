@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore handcrafted leather shoes, jackets, bags and accessories from Aura Leather Co."
+    />
+    <title>Shop the Collection — Aura Leather Co.</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/main.js"></script>
+    <script defer src="/js/products.js"></script>
+  </head>
+  <body data-page="shop">
+    <div id="site-header"></div>
+    <main class="page-main">
+      <section class="page-intro">
+        <p class="eyebrow">The collection</p>
+        <h1 data-fold-text>Made to move with you.</h1>
+        <p>
+          Small-batch leather pieces, finished by hand and made to stay in
+          rotation.
+        </p>
+      </section>
+      <section class="shop-tools" aria-label="Filter and sort products">
+        <label
+          >Category<select id="filter-category">
+            <option value="">All pieces</option>
+          </select></label
+        ><label
+          >Made for<select id="filter-audience">
+            <option value="">Everyone</option>
+            <option value="men">Men</option>
+            <option value="women">Women</option>
+            <option value="kids">Kids</option>
+            <option value="unisex">Unisex</option>
+          </select></label
+        >
+        <div class="price-filter">
+          <span class="filter-label"
+            >Price range <strong id="price-display">$0 – $700</strong></span
+          ><label class="visually-hidden" for="filter-min">Minimum price</label
+          ><input
+            id="filter-min"
+            type="range"
+            min="0"
+            max="700"
+            step="10"
+            value="0"
+            aria-label="Minimum price"
+          /><label class="visually-hidden" for="filter-max">Maximum price</label
+          ><input
+            id="filter-max"
+            type="range"
+            min="0"
+            max="700"
+            step="10"
+            value="700"
+            aria-label="Maximum price"
+          />
+        </div>
+        <label
+          >Sort by<select id="sort-products">
+            <option value="popularity">Popularity</option>
+            <option value="newest">Newest arrivals</option>
+            <option value="price-low">Price: low to high</option>
+            <option value="price-high">Price: high to low</option>
+          </select></label
+        ><label class="shop-search"
+          >Search<input
+            id="shop-search"
+            type="search"
+            placeholder="Try ‘wallet’ or ‘boot’"
+        /></label>
+      </section>
+      <div class="shop-toolbar">
+        <span id="shop-count">The collection, in full</span
+        ><button id="clear-filters" class="text-button" type="button">
+          Clear filters
+        </button>
+      </div>
+      <section
+        id="product-grid"
+        class="product-grid"
+        aria-label="Leather product collection"
+        aria-live="polite"
+        aria-busy="true"
+      >
+        <p class="loading-note">Gathering the collection…</p>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+  </body>
+</html>
